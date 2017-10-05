@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+app=$1
+
+rm -f $app/*.crx
+rm -Rf $app/dist
+mkdir $app/dist
+
+cp $app/src/manifest.json $app/dist/
+
+convert $app/src/icon.png -resize 16x16 $app/dist/icon16.png
+convert $app/src/icon.png -resize 24x24 $app/dist/icon24.png
+convert $app/src/icon.png -resize 32x32 $app/dist/icon32.png
+convert $app/src/icon.png -resize 48x48 $app/dist/icon48.png
+convert $app/src/icon.png -resize 128x128 $app/dist/icon128.png
+
+if [ ! -f $app/key.pem ]; then
+    google-chrome-stable --user-data-dir=/tmp/chrome_profile --pack-extension=$app/dist --no-message-box
+    mv $app/dist.pem $app/key.pem
+else
+    google-chrome-stable --user-data-dir=/tmp/chrome_profile --pack-extension=$app/dist --pack-extension-key=$app/key.pem --no-message-box
+fi
+
+id=`cat $app/key.pem | openssl rsa -pubout -outform DER 2>/dev/null| openssl dgst -sha256 | awk '{print $2}' | cut -c 1-32 | tr '0-9a-f' 'a-p'`
+
+mv $app/dist.crx $app/$id.crx
+
+cat > $app/update.xml << EOM
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='$id'>
+    <updatecheck codebase='https://raw.githubusercontent.com/korylprince/chrome_icons/master/$app/$id.crx' version='2.0' />
+  </app>
+</gupdate>
+EOM
