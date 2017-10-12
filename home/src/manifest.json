@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Home Page",
+    "description": "Bullard ISD home page",
+    "version": "1.0",
+    "app": {
+        "urls": [
+            "*://*.bullardisd.net/"
+        ],
+        "launch": {
+            "web_url": "http://www.bullardisd.net"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+
+    }
+}
