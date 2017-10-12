@@ -2,9 +2,12 @@
 import os
 import shutil
 import hashlib
+import json
 
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.serialization import load_pem_private_key, Encoding, PublicFormat
+
+from bs4 import BeautifulSoup
 
 xml_template = """
 <?xml version='1.0' encoding='UTF-8'?>
@@ -15,6 +18,14 @@ xml_template = """
 </gupdate>
 """.strip()
 
+icon_template = """
+<div class="icon">
+    <a href="{app}/{id}.crx">
+        <img src="{app}/icon128.png" />
+        <span>{name}</span>
+    </a>
+</div>
+""".strip()
 
 def get_last_modified(app):
     mtimes = []
@@ -36,6 +47,11 @@ def get_app_id(app):
         hash.append(chr(int(char, 16) + ord("a")))
     return "".join(hash)
 
+def get_app_name(app):
+    with open(os.path.join(app, "src/manifest.json")) as f:
+        manifest = json.load(f)
+        return manifest["name"]
+
 def generate_app(app):
     print("Generating", app + ": ", end="")
 
@@ -49,6 +65,7 @@ def generate_app(app):
    #generate icons
     for size in [16, 24, 32, 48, 128]:
         os.system("convert ./{app}/src/icon.png -resize {size}x{size} ./{app}/dist/icon{size}.png".format(app=app, size=size))
+    shutil.copy(os.path.join(app, "dist/icon128.png"), app)
 
     #generate app
     if os.path.isfile(os.path.join(app, "key.pem")):
@@ -69,6 +86,13 @@ def generate_app(app):
 
     print(get_app_id(app))
 
+# open index.html
+with open("index.html") as f:
+    html = BeautifulSoup(f, "lxml")
+
+icons_div = html.find_all("div", class_="icons")[0]
+icons_div.clear()
+
 for app in os.listdir("."):
     if os.path.isdir(app) and app not in (".git", "docs"):
         #generate app if not created or unchanged
@@ -84,3 +108,9 @@ for app in os.listdir("."):
                     generate_app(app)
         except FileNotFoundError:
             generate_app(app)
+        
+        #insert icon to index.html
+        icons_div.append(BeautifulSoup(icon_template.format(app=app, id=get_app_id(app), name=get_app_name(app)), "html.parser"))
+
+with open("index.html", "w") as f:
+    f.write(html.prettify())
