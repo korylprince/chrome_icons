@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "BrainPOP Jr.",
+    "description": "BrainPOP Jr.",
+    "version": "1.0",
+    "app": {
+        "urls": [
+            "https://jr.brainpop.com/"
+        ],
+        "launch": {
+            "web_url": "https://jr.brainpop.com/"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
