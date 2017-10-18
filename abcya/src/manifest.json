@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "ABCya",
+    "description": "ABCya!",
+    "version": "1.0",
+    "app": {
+        "urls": [
+            "http://www.abcya.com/"
+        ],
+        "launch": {
+            "web_url": "http://www.abcya.com/"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
