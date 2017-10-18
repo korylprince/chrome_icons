@@ -93,7 +93,7 @@ with open("index.html") as f:
 icons_div = html.find_all("div", class_="icons")[0]
 icons_div.clear()
 
-for app in os.listdir("."):
+for app in sorted(os.listdir(".")):
     if os.path.isdir(app) and app not in (".git", "docs"):
         #generate app if not created or unchanged
         try:
