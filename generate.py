@@ -25,6 +25,21 @@ icon_template = """
         <span>{name}</span>
     </a>
 </div>
+<a href="#" class="advanced" data-change="{id}">advanced</a>
+<div id="{id}" class="icon-info hidden">
+    <table class="bordered striped centered">
+        <tbody>
+            <tr>
+                <td>id</td>
+                <td>{id}</td>
+            </tr>
+            <tr>
+                <td>update URL</td>
+                <td><a href="{app}/update.xml">update.xml</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 """.strip()
 
 def get_last_modified(app):
