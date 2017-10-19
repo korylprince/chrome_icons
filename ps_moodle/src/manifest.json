@@ -2,7 +2,8 @@
     "manifest_version": 2,
     "name": "BPS Moodle",
     "description": "BPS Lab Moodle",
-    "version": "2.1",
+    "version": "2.2",
+    "update_url": "https://korylprince.github.io/chrome_icons/ps_moodle/update.xml",
     "app": {
         "urls": [
             "*://*.bullardisd.net/"

@@ -2,7 +2,8 @@
     "manifest_version": 2,
     "name": "iRead",
     "description": "BISD iRead",
-    "version": "2.0",
+    "version": "2.1",
+    "update_url": "https://korylprince.github.io/chrome_icons/iread/update.xml",
     "app": {
         "urls": [
             "https://h100004058.education.scholastic.com/ScholasticCentral"
