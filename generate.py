@@ -13,7 +13,7 @@ xml_template = """
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='{id}'>
-    <updatecheck codebase='https://raw.githubusercontent.com/korylprince/chrome_icons/master/{app}/{id}.crx' version='2.0' />
+    <updatecheck codebase='https://raw.githubusercontent.com/korylprince/chrome_icons/master/{app}/{id}.crx' version='{version}' />
   </app>
 </gupdate>
 """.strip()
@@ -52,6 +52,11 @@ def get_app_name(app):
         manifest = json.load(f)
         return manifest["name"]
 
+def get_app_version(app):
+    with open(os.path.join(app, "src/manifest.json")) as f:
+        manifest = json.load(f)
+        return manifest["version"]
+
 def generate_app(app):
     print("Generating", app + ": ", end="")
 
@@ -78,7 +83,7 @@ def generate_app(app):
 
     #generate update.xml
     with open(os.path.join(app, "update.xml"), "w") as f:
-        f.write(xml_template.format(app=app, id=get_app_id(app)) + "\n")
+        f.write(xml_template.format(app=app, id=get_app_id(app), version=get_app_version(app)) + "\n")
 
     #update .last_modified
     with open(os.path.join(app, ".last_modified"), "w") as f:
