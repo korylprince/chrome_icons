@@ -13,7 +13,7 @@ xml_template = """
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
   <app appid='{id}'>
-    <updatecheck codebase='https://raw.githubusercontent.com/korylprince/chrome_icons/master/{app}/{id}.crx' version='{version}' />
+    <updatecheck codebase='https://korylprince.github.io/chrome_icons/{app}/{id}.crx' version='{version}' />
   </app>
 </gupdate>
 """.strip()
@@ -96,10 +96,6 @@ def generate_app(app):
 
     os.rename(os.path.join(app, "dist.crx"), os.path.join(app, get_app_id(app) + ".crx"))
 
-    #generate update.xml
-    with open(os.path.join(app, "update.xml"), "w") as f:
-        f.write(xml_template.format(app=app, id=get_app_id(app), version=get_app_version(app)) + "\n")
-
     #update .last_modified
     with open(os.path.join(app, ".last_modified"), "w") as f:
         f.write(str(get_last_modified(app)))
@@ -128,6 +124,10 @@ for app in sorted(os.listdir(".")):
                     generate_app(app)
         except FileNotFoundError:
             generate_app(app)
+        
+        #generate update.xml
+        with open(os.path.join(app, "update.xml"), "w") as f:
+            f.write(xml_template.format(app=app, id=get_app_id(app), version=get_app_version(app)) + "\n")
         
         #insert icon to index.html
         icons_div.append(BeautifulSoup(icon_template.format(app=app, id=get_app_id(app), name=get_app_name(app)), "html.parser"))
