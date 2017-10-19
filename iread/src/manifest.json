@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "iRead",
     "description": "BISD iRead",
-    "version": "1.0",
+    "version": "2.0",
     "app": {
         "urls": [
             "https://h100004058.education.scholastic.com/ScholasticCentral"

@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Sesame Street Games",
     "description": "Sesame Street Games",
-    "version": "1.0",
+    "version": "2.0",
     "app": {
         "urls": [
             "https://www.sesamestreet.org/games"
