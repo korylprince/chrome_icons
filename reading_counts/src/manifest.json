@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Reading Counts",
+    "description": "Reading Counts!",
+    "version": "1.0",
+    "update_url": "https://korylprince.github.io/chrome_icons/reading_counts/update.xml",
+    "app": {
+        "urls": [
+            "http://win-scholastic.bullardisd.net:55880/slms/studentaccess"
+        ],
+        "launch": {
+            "web_url": "http://win-scholastic.bullardisd.net:55880/slms/studentaccess"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
