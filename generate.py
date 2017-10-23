@@ -110,7 +110,7 @@ icons_div = html.find_all("div", class_="icons")[0]
 icons_div.clear()
 
 for app in sorted(os.listdir(".")):
-    if os.path.isdir(app) and app not in (".git", "docs"):
+    if os.path.isdir(app) and app not in (".git"):
         #generate app if not created or unchanged
         try:
             with open(os.path.join(app, ".last_modified")) as f:
