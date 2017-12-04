@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Elf on the Shelf",
+    "description": "Elf on the Shelf",
+    "version": "1.0",
+    "update_url": "https://korylprince.github.io/chrome_icons/elf_on_the_shelf/update.xml",
+    "app": {
+        "urls": [
+            "https://www.elfontheshelf.com/kids"
+        ],
+        "launch": {
+            "web_url": "https://www.elfontheshelf.com/kids"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+
+    }
+}
