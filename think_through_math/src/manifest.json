@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Think Through Math",
+    "description": "Think Through Math",
+    "version": "1.0",
+    "update_url": "https://korylprince.github.io/chrome_icons/think_through_math/update.xml",
+    "app": {
+        "urls": [
+            "https://lms.thinkthroughmath.com/users/sign_in"
+        ],
+        "launch": {
+            "web_url": "https://lms.thinkthroughmath.com/users/sign_in"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
