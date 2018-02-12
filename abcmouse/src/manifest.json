@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "ABCmouse",
+    "description": "ABCmouse.com",
+    "version": "1.0",
+    "update_url": "https://korylprince.github.io/chrome_icons/abcmouse/update.xml",
+    "app": {
+        "urls": [
+            "https://www.abcmouse.com/"
+        ],
+        "launch": {
+            "web_url": "https://www.abcmouse.com/"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
