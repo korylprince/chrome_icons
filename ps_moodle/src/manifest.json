@@ -2,14 +2,14 @@
     "manifest_version": 2,
     "name": "BPS Moodle",
     "description": "BPS Lab Moodle",
-    "version": "2.2",
+    "version": "3.0",
     "update_url": "https://korylprince.github.io/chrome_icons/ps_moodle/update.xml",
     "app": {
         "urls": [
             "*://*.bullardisd.net/"
         ],
         "launch": {
-            "web_url": "https://moodle.bullardisd.net/primary/course/view.php?id=4"
+            "web_url": "https://moodle.bullardisd.net/course/view.php?id=11"
         }
     },
     "icons": {
