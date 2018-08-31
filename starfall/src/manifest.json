@@ -2,12 +2,9 @@
     "manifest_version": 2,
     "name": "Starfall",
     "description": "Starfall",
-    "version": "2.1",
+    "version": "2.2",
     "update_url": "https://korylprince.github.io/chrome_icons/starfall/update.xml",
     "app": {
-        "urls": [
-            "http://www.starfall.com/"
-        ],
         "launch": {
             "web_url": "http://www.starfall.com/"
         }

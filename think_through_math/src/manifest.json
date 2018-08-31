@@ -2,12 +2,9 @@
     "manifest_version": 2,
     "name": "Think Through Math",
     "description": "Think Through Math",
-    "version": "1.0",
+    "version": "1.1",
     "update_url": "https://korylprince.github.io/chrome_icons/think_through_math/update.xml",
     "app": {
-        "urls": [
-            "https://lms.thinkthroughmath.com/users/sign_in"
-        ],
         "launch": {
             "web_url": "https://lms.thinkthroughmath.com/users/sign_in"
         }

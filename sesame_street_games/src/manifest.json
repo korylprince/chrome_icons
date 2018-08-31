@@ -2,12 +2,9 @@
     "manifest_version": 2,
     "name": "Sesame Street Games",
     "description": "Sesame Street Games",
-    "version": "2.1",
+    "version": "2.2",
     "update_url": "https://korylprince.github.io/chrome_icons/sesame_street_games/update.xml",
     "app": {
-        "urls": [
-            "https://www.sesamestreet.org/games"
-        ],
         "launch": {
             "web_url": "https://www.sesamestreet.org/games"
         }

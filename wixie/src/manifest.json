@@ -2,12 +2,9 @@
     "manifest_version": 2,
     "name": "Wixie",
     "description": "Bullard ISD link to Wixie",
-    "version": "2.1",
+    "version": "2.2",
     "update_url": "https://korylprince.github.io/chrome_icons/wixie/update.xml",
     "app": {
-        "urls": [
-            "*://*.wixie.com/"
-        ],
         "launch": {
             "web_url": "https://bull.wixie.com"
         }

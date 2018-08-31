@@ -2,12 +2,9 @@
     "manifest_version": 2,
     "name": "BrainPOP Jr.",
     "description": "BrainPOP Jr.",
-    "version": "2.1",
+    "version": "2.2",
     "update_url": "https://korylprince.github.io/chrome_icons/brainpop_jr/update.xml",
     "app": {
-        "urls": [
-            "https://jr.brainpop.com/"
-        ],
         "launch": {
             "web_url": "https://jr.brainpop.com/"
         }
