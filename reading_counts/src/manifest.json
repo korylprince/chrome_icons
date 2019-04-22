@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Reading Counts",
     "description": "Reading Counts!",
-    "version": "2.1",
+    "version": "2.2",
     "update_url": "https://korylprince.github.io/chrome_icons/reading_counts/update.xml",
     "app": {
         "launch": {
