@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Imagine Math",
+    "description": "Imagine Math",
+    "version": "1.1",
+    "update_url": "https://korylprince.github.io/chrome_icons/imagine_math/update.xml",
+    "app": {
+        "launch": {
+            "web_url": "https://math.imaginelearning.com/users/sign_in"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
