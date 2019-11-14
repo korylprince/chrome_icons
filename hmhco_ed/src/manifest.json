@@ -2,11 +2,11 @@
     "manifest_version": 2,
     "name": "Ed: Your friend in learning",
     "description": "Ed: Your friend in learning",
-    "version": "1.1",
+    "version": "1.2",
     "update_url": "https://korylprince.github.io/chrome_icons/hmhco_ed/update.xml",
     "app": {
         "launch": {
-            "web_url": "https://www.hmhco.com/one/login/?connection=01050577"
+            "web_url": "https://www.hmhco.com/api/external-sso/access?connection=bullardisd-net"
         }
     },
     "icons": {
