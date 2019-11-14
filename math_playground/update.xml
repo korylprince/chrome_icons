@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='khogekhapinfkcmhcahkhpkcemhiooci'>
+    <updatecheck codebase='https://korylprince.github.io/chrome_icons/math_playground/khogekhapinfkcmhcahkhpkcemhiooci.crx' version='1.0' />
+  </app>
+</gupdate>
