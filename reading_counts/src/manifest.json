@@ -2,11 +2,11 @@
     "manifest_version": 2,
     "name": "Reading Counts",
     "description": "Reading Counts!",
-    "version": "2.2",
+    "version": "3.0",
     "update_url": "https://korylprince.github.io/chrome_icons/reading_counts/update.xml",
     "app": {
         "launch": {
-            "web_url": "http://win-scholastic.bullardisd.net:55880/slms/studentaccess"
+            "web_url": "https://h100004058.education.scholastic.com/"
         }
     },
     "icons": {
