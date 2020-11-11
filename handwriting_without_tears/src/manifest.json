@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Handwriting Without Tears",
+    "description": "Handwriting Without Tears",
+    "version": "1.2",
+    "update_url": "https://korylprince.github.io/chrome_icons/handwriting_without_tears/update.xml",
+    "app": {
+        "launch": {
+            "web_url": "https://clever.com/oauth/instant-login?client_id=18f24af96e48224eeee1&district_id=59e640dba65dc0000167eae2"
+        }
+    },
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    }
+}
